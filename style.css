@@ -1,5 +1,10 @@
 :root {
     --whiteColor: #fff;
+    --fristColorInGradient: #153677;
+    --secondColorInGradient: #4e085f;
+    --toDoTextColor: #002765;
+    --backgroungColorRow: #edeef0;
+    --buttonColor: #ff5945;
 }
 
 * {
@@ -8,3 +13,83 @@
     padding: 0;
 }
 
+body .container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--fristColorInGradient), var(--secondColorInGradient) );
+    padding: 10px;
+}
+
+
+body .container .todo-app {
+    width: 100%;
+    max-width: 540px;
+    background: var(--whiteColor);
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+body .container .todo-app h2 {
+    color: var(--toDoTextColor);
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+body .container .todo-app h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+body .container .todo-app .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: var(--backgroungColorRow);
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+body .container .todo-app .row input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+
+body .container .todo-app .row button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: var(--buttonColor);
+    color: var(--whiteColor);
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+body .container .todo-app ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+body .container .todo-app ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(./assets/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
