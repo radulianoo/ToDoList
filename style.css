@@ -5,6 +5,7 @@
     --toDoTextColor: #002765;
     --backgroungColorRow: #edeef0;
     --buttonColor: #ff5945;
+    --checkedColor: #555;
 }
 
 * {
@@ -92,4 +93,13 @@ body .container .todo-app ul li::before {
     background-position: center;
     top: 12px;
     left: 8px;
+}
+
+#checked {
+    color: var(--checkedColor);
+    text-decoration: line-through;
+}
+
+#checked::before {
+    background-image: url(./assets/checked.png);
 }
